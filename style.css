@@ -9,19 +9,18 @@ body {
 
 
 .subject-link {
-    background-color:blanchedalmond;
-    text-align:center;
+    background-color: blanchedalmond;
+    text-align: center;
     border: 3px solid #420420;
     padding: 10px;
-    margin: 30px;
+    margin: 30px auto;
     font-size: 40px;
-    color:#676767;
+    color: #676767;
     border-left: 5px solid #420420;
     box-sizing: border-box;
-    width:500px;
-    margin-left:auto;
-    margin-right:auto;
-    box-shadow: 10px 10px 5px #420420;       
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 10px 10px 5px #420420;
 }
 
 #tutoring-fees {
@@ -37,16 +36,15 @@ font-size: 100px;
     color: #420420;
     text-align: center;
     border: 1.2px solid #420420;
-    background-color:blanchedalmond;
-    padding: 5px;
+    background-color: blanchedalmond;
+    padding: 10px;
     box-sizing: border-box;
-    height: 57px;
-    width: 900px;
-    margin: 0 auto;
-    border-width: 7px; 
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto 0;
+    border-width: 7px;
     border-color: #420420;
     border-radius: 10px;
-    margin-top: 20px;
     white-space: normal;
 }
 
@@ -55,41 +53,74 @@ overflow: scroll;
 }
 
 
-#ye {
-    margin-left:auto;
-    margin-right:auto;
-    display: block;
-    height: 200px;
-    width: 1666px;
-}
-#downye {
-    float: bottom-left;
-    height: 211px;
-    width: 3061px;
-}
-#leftye {
-    float: left;
-    height: 1252px;
-    width: 700px;
-    margin-top: -1252px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    margin-right: -500px;
+.frame {
+    display: grid;
+    grid-template-columns: minmax(80px, 12vw) 1fr minmax(80px, 12vw);
+    grid-template-rows: minmax(80px, 12vh) 1fr minmax(80px, 12vh);
+    min-height: 100vh;
 }
 
-#rightye {
-    float: right;
-    height: 1252px;
-    width: 700px;
-    margin-top: -1252px;
-    margin-left: -500px;
-    margin-bottom: 0px;
-    margin-right: 0px;
+.frame-top {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frame-bottom {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frame-left {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frame-right {
+    grid-column: 3;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frame-center {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px;
+    text-align: center;
+}
+
+.subject-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.subject-link {
+    width: auto;
+    max-width: 220px;
+    margin: 0;
 }
 
 ul {
-font-size: 50px;
-margin: 50px;
+    font-size: 50px;
+    margin: 50px;
 }
 
 .back-link {
@@ -99,19 +130,21 @@ margin: 50px;
 
 .subject-layout {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 24px;
-    margin: 0 50px 40px;
+    gap: 4%;
+    margin: 0 5% 40px;
 }
 
 .subject-text {
-    flex: 1 1 0;
-    min-width: 0;
+    flex: 1 1 50%;
+    min-width: 260px;
 }
 
 .imageye {
-    flex: 0 0 1000px;
+    flex: 0 0 40%;
+    max-width: 40%;
     margin: 0;
     text-align: right;
 }
@@ -120,10 +153,27 @@ margin: 50px;
 #pianoye img {
     display: block;
     width: 100%;
-    max-width: 1000px;
-    height: 700px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     margin: 0;
+}
+
+@media (max-width: 900px) {
+    .subject-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .imageye {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .subject-text {
+        flex: 1 1 100%;
+    }
 }
 
 .subject-name {
