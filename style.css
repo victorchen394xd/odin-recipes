@@ -1,0 +1,142 @@
+
+body {
+    background-color: skyblue;
+    border:5px solid orange;
+    margin: 0;
+    position:sticky;
+    min-height: 100vh;
+}
+
+
+.subject-link {
+    background-color:blanchedalmond;
+    text-align:center;
+    border: 3px solid #420420;
+    padding: 10px;
+    margin: 30px;
+    font-size: 40px;
+    color:#676767;
+    border-left: 5px solid #420420;
+    box-sizing: border-box;
+    width:500px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 10px 10px 5px #420420;       
+}
+
+#tutoring-fees {
+text-align:center;
+size: 800px;
+color: black;
+font-size: 100px;
+}
+
+
+.fineprint {
+    font-size: 16px;
+    color: #420420;
+    text-align: center;
+    border: 1.2px solid #420420;
+    background-color:blanchedalmond;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 57px;
+    width: 900px;
+    margin: 0 auto;
+    border-width: 7px; 
+    border-color: #420420;
+    border-radius: 10px;
+    margin-top: 20px;
+    white-space: normal;
+}
+
+.fineprint.tc {
+overflow: scroll;
+}
+
+
+#ye {
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    height: 200px;
+    width: 1666px;
+}
+#downye {
+    float: bottom-left;
+    height: 211px;
+    width: 3061px;
+}
+#leftye {
+    float: left;
+    height: 1252px;
+    width: 700px;
+    margin-top: -1252px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: -500px;
+}
+
+#rightye {
+    float: right;
+    height: 1252px;
+    width: 700px;
+    margin-top: -1252px;
+    margin-left: -500px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+ul {
+font-size: 50px;
+margin: 50px;
+}
+
+.back-link {
+    margin:50px;
+    font-size:30px;
+}
+
+.subject-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0 50px 40px;
+}
+
+.subject-text {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.imageye {
+    flex: 0 0 1000px;
+    margin: 0;
+    text-align: right;
+}
+
+.imageye img,
+#pianoye img {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 700px;
+    object-fit: cover;
+    margin: 0;
+}
+
+.subject-name {
+    margin:50px;
+    font-size:70px;
+}
+
+#coding-notes {
+    margin:50px;
+    font-size: 20px;
+}
+
+#pianoye img {
+    transform: scaleX(-1);
+}
+
